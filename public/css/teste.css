@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Padrão do documento */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Deixando o main no centro */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 1200px;
+}
+
+main img {
+    width: 50px;
+}
+
+/* AREA OPÇÕES **********************************/
+#opcoes {
+    float: left;
+    width: 100px;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+/* AREA DO PERFIL ********************************/
+#perfil {
+    width: 100%;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 283px; */
+    padding: 10px 20px;
+}
+
+.fotoNome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_mensagem{
+    margin-top: auto;
+    clear: both;
+}
