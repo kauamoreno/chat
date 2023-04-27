@@ -21,18 +21,6 @@ document.querySelector('form').addEventListener('submit', evento => {
     //Limpa o input da mensagem e desabilita o input do nome do usuário após a primeira mensagem
     mensagemInput.value = '';
     nomeInput.disabled = true;
-
-    // Conectando com o banco de dados e usando o metodo POST
-    fetch("http://localhost:3000/mensagens", {
-        method: "POST",
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            nome: nome,
-            mensagem: mensagem
-        })
-    }).then(response => response.json())
 });
 
 //Adiciona um evento de mensagem recebido para o servidor
