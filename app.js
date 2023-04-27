@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
 })
 
 //Iniciar o servidor
-const port = 8080;
+const port = 3000;
 http.listen(port, () => {
     console.log(`Servidor iniciado: http://localhost:${port}`);
 })
