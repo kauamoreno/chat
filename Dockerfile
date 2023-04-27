@@ -6,7 +6,7 @@ FROM node:18
 WORKDIR /main
 
 # Expose port 3000
-EXPOSE 3000
+EXPOSE 8080
 
 # Copy the application files into the working directory
 COPY . /main
