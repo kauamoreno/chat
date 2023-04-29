@@ -1,0 +1,4 @@
+1. Arrumar espaçamento do aside - FEITO
+2. Aumentar tela de mensagens - FEITO
+3. Colocar os input para baixo - FEITO
+4. Arrumar width do input 

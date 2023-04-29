@@ -1,0 +1,110 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Padrão do documento */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 283px; */
+  padding: 10px 20px;
+}
+
+/* Deixando o main no centro */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 1200px;
+  height: 95vh;
+  position: relative;
+}
+main img {
+  width: 50px;
+}
+
+/* AREA OPÇÕES **********************************/
+#opcoes {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 100px;
+  height: 100%;
+  align-items: center;
+  background-color: #FAFAFA;
+  border-right: 3px solid #EEEEEE;
+}
+#opcoes .inicial img {
+  margin: 5px 0;
+}
+#opcoes .opcoes {
+  margin-top: 100px;
+}
+#opcoes .opcoes img {
+  margin: 5px 0;
+}
+
+/* AREA DO PERFIL ********************************/
+#perfil {
+  width: 100%;
+  height: 80px;
+  border-bottom: 3px solid #EEEEEE;
+}
+#perfil .fotoNome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#perfil .fotoNome img {
+  margin: 0 15px;
+}
+
+#mensagens {
+  width: 100%;
+  height: 772px;
+  background: #FAFAFA;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.input_mensagem {
+  border-top: 3px solid #EEEEEE;
+  /*Para deixar no fundo do main*/
+  bottom: 0;
+  position: absolute;
+  width: 91.7%;
+}
+.input_mensagem .rowInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 20px;
+}
+.input_mensagem .rowInput #mensagemInput {
+  width: 85%;
+  height: 20px;
+  padding: 7px;
+  border: 1px solid black;
+  background: #FAFAFA;
+  border-radius: 12px;
+}
+.input_mensagem .rowInput button {
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
