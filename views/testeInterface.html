@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/static/img/chat.png" type="image/x-icon">
     <title>Chat</title>
 
+    <script src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="/static/scss/style.css">
 </head>
 
@@ -38,7 +39,7 @@
                     <div class="fotoNome">
                         <img src="/static/img/perfil.png" alt="Foto de Perfil"><br>
                         <center>
-                            <p>Kauã Moreno</p>
+                            <p id="nome">Kauã Moreno</p>
                         </center>
                     </div>
                     <div class="video_info">
@@ -157,11 +158,13 @@
                 <div class="rowInput">
                     <img src="/static/img/clipe.png" alt="Clipe">
                     <input type="text" placeholder="Digite sua mensagem..." id="mensagemInput">
-                    <button>Enviar</button>
+                    <button id="enviar">Enviar</button>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="/static/js/script.js"></script>
 </body>
 
 </html>
