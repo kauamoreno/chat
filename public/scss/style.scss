@@ -18,17 +18,31 @@
     /* gap: 283px; */
     padding: 10px 20px;  
 }
+#fotoPerfil1,
+#fotoPerfil2,
+#fotoPerfil3{
+    border-radius: 50px; 
+}
+
+#fotoPerfil3{
+    width: 30px;
+}
 
 /* Deixando o main no centro */
 body {
     display: flex;
     justify-content: center;
+
+    // background: url('/static/img/background.jpg')no-repeat;
+    // background-position: center;
+    // background-size: cover;
 }
 
 main {
     width: 1200px;
     height: 95vh;
     position: relative;
+    display: none;
 
     img {
         width: 50px;
@@ -91,6 +105,8 @@ main {
 
 .input_mensagem{
     border-top: 3px solid #EEEEEE;
+    background-color: #ffffff;
+    z-index: 1000;
     
     /*Para deixar no fundo do main*/
     bottom: 0;
