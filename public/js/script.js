@@ -25,35 +25,25 @@ document.querySelector('#enviar').addEventListener('click', evento => {
 
 //Adiciona um evento de mensagem recebido para o servidor
 socket.on('chat message', dados => {
-    
-    const fotoUser = localStorage.getItem('fotoUser');
-    
-    //Cria um elemento de lista para exibir a mensagem
-    //const lista = document.createElement('li');
-    //Atribuir uma ID de acordo com o seu nome de usuário
 
+    const fotoUser = localStorage.getItem('fotoUser');
     const mensagem = document.createElement('div');
 
     const mensagemHTML = `
     <div id="mensagemhtml">
-        <img src="${fotoUser}" alt="" id="fotoPerfil3">
-        <p id="mensagemTexto">${dados.mensagem}</p>
+        <img width="30px" src="${fotoUser}" alt="" id="fotoPerfil3">
+        <div id="balaoMensagem">
+            <p id="mensagemTexto">${dados.mensagem}</p>
+        <div>
     </div>`
 
 
-    // if (dados.nome === nomeInput.value) {
-    //     lista.setAttribute('id', 'usuario')
-    // } else {
-    //     lista.setAttribute('id', 'outro')
-    // }
-
-
-    //Define o texto da mensagem
-    //lista.textContent = `${dados.mensagem}`;
-    //Adiciona o elemento de mensagens
-    //mensagens.appendChild(lista);
-
     const mensagensDisplay = document.getElementById('mensagens');
+
+    //Acrescentando a mensagem ao html
     mensagensDisplay.appendChild(mensagem);
     mensagem.innerHTML = mensagemHTML;
+
+    // Rolar automaticamente para o final
+    mensagensDisplay.scrollTop = mensagensDisplay.scrollHeight;
 })
