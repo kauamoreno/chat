@@ -27,9 +27,9 @@ body {
     display: flex;
     justify-content: center;
 
-    // background: url('/static/img/background.jpg')no-repeat;
-    // background-position: center;
-    // background-size: cover;
+    background: url('/static/img/background.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 main {
@@ -37,6 +37,7 @@ main {
     height: 95vh;
     position: relative;
     display: none;
+    background-color: #ffffff;
 
     img {
         width: 50px;
