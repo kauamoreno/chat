@@ -12,7 +12,7 @@ app.use('/static', express.static('public'));
 
 //Rota para página inicial
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/testeInterface.html');
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 //Evento para o usuário conectar ao servidor
