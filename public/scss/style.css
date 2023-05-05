@@ -17,20 +17,29 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* gap: 283px; */
   padding: 10px 20px;
+}
+
+#fotoPerfil1,
+#fotoPerfil2 {
+  border-radius: 50px;
 }
 
 /* Deixando o main no centro */
 body {
   display: flex;
   justify-content: center;
+  background: url("/static/img/background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 main {
   width: 1200px;
   height: 95vh;
   position: relative;
+  display: none;
+  background-color: #ffffff;
 }
 main img {
   width: 50px;
@@ -75,7 +84,7 @@ main img {
 
 #mensagens {
   width: 100%;
-  height: 772px;
+  height: 75vh;
   background: #FAFAFA;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -83,6 +92,9 @@ main img {
 
 .input_mensagem {
   border-top: 3px solid #EEEEEE;
+  background-color: #ffffff;
+  z-index: 1000;
+  height: 69px;
   /*Para deixar no fundo do main*/
   bottom: 0;
   position: absolute;
@@ -107,4 +119,26 @@ main img {
   padding: 5px;
   border: 1px solid black;
   border-radius: 10px;
+}
+
+/*MENSAGENS NOVA*/
+#mensagemhtml {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  padding: 10px;
+}
+#mensagemhtml #fotoPerfil3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+#mensagemhtml #balaoMensagem {
+  margin-left: 30px;
+  border-radius: 0px 16px 16px 16px;
+  background-color: aquamarine;
+  padding: 10px;
+}
+#mensagemhtml #balaoMensagem #mensagemTexto {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
