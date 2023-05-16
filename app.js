@@ -8,7 +8,7 @@ const http = require('http').createServer(app);
 //Importar o socket.io e colocando o http como parâmetro
 const io = require('socket.io')(http);
 
-app.use('/static', express.static('public'));
+app.use('/public', express.static('public'));
 
 //Rota para página inicial
 app.get('/', (req, res) => {
