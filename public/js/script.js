@@ -33,7 +33,7 @@ socket.on('chat message', dados => {
     <div id="mensagemhtml">
         <img width="30px" src="${fotoUser}" alt="" id="fotoPerfil3">
         <div id="balaoMensagem">
-            <p id="mensagemTexto">${dados.mensagem}</p>
+            <p id="mensagemTexto">${escapeHTML(dados.mensagem)}</p>
         <div>
     </div>`
 
@@ -47,3 +47,21 @@ socket.on('chat message', dados => {
     // Rolar automaticamente para o final
     mensagensDisplay.scrollTop = mensagensDisplay.scrollHeight;
 })
+
+//Cria uma função para escapar os caracteres especiais do HTML
+function escapeHTML(text) {
+    return text.replace(/[&<>"']/g, function (match) {
+        switch (match) {
+            case "&":
+                return "&amp;";
+            case "<":
+                return "&lt;";
+            case ">":
+                return "&gt;";
+            case "\"":
+                return "&quot;";
+            case "'":
+                return "&#039;";
+        }
+    });
+}
