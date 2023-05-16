@@ -123,15 +123,22 @@ main {
             width: 85%;
             height: 20px;
             padding: 7px;
-            border: 1px solid black;
+            border: 2px solid black;
             background: #FAFAFA;
-            border-radius: 12px;
+            border-radius: 8px;
         }
         button{
             margin-left: 20px;
-            padding: 5px;
-            border: 1px solid black;
+            padding: 10px;
+            border: 2px solid black;
             border-radius: 10px;
+            background-color: rgba(79, 224, 11, 0.5);
+        }
+        button:hover{
+            transition: 300ms;
+            background-color: rgb(42, 163, 18);
+            border-color: rgb(42, 163, 18);
+            color: white;
         }
     }
 }
@@ -154,7 +161,7 @@ main {
     #balaoMensagem{
         margin-left: 30px;
         border-radius: 0px 16px 16px 16px;
-        background-color: aquamarine;
+        background-color: rgba(79, 224, 11, 0.3);
         padding: 10px;
 
         #mensagemTexto{
