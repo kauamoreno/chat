@@ -1,3 +1,5 @@
+let nome;
+
 document.addEventListener('DOMContentLoaded', () => {
 
     Swal.fire({
@@ -39,9 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             //Verficando se o user tem nome e o colocando
             if(result.value.name == null){
-                document.querySelector('#nome').innerHTML = 'Nome Null'
+                nome = 'Sem nome';
+                document.querySelector('#nome').innerHTML = nome;
             }else{
-                document.querySelector('#nome').innerHTML = result.value.name
+                nome = result.value.name
+                document.querySelector('#nome').innerHTML = nome;
             }
             document.querySelector('#main').style.display = 'block';
 
