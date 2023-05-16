@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#fotoPerfil1').src = result.value.avatar_url
             document.querySelector('#fotoPerfil2').src = result.value.avatar_url
             
-            document.querySelector('body').style.backgroundImage = "url('/static/img/background.jpg')";
+            document.querySelector('body').style.backgroundImage = "url('/public/img/background.jpg')";
             document.querySelector('body').style.backgroundRepeat = "no-repeat";
             
             //Verficando se o user tem nome e o colocando

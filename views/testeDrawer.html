@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .drawer {
+        position: fixed;
+        top: 0;
+        left: -300px; /* Define a posição inicial do drawer */
+        width: 300px;
+        height: 100vh;
+        background-color: #f1f1f1;
+        transition: left 0.3s ease-in-out;
+      
+      
+      
+    }
+
+    .drawer.open {
+        left: 0; /* Define a posição quando o drawer estiver aberto */
+      }
+      
+      .drawer-content {
+        padding: 20px;
+      }
+      
+      .drawer-toggle {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+      }
+
+      #opcoes {
+        display: flex;
+        justify-content: space-between;
+        float: left;
+        width: 100px;
+        height: 100%;
+        align-items: center;
+        background-color: #FAFAFA;
+        border-right: 3px solid #EEEEEE;
+    
+      }
+            .inicial img{
+                margin: 5px 0;
+            }
+        
+        .opcoes{
+            margin-top: 100px;
+    
+            
+        }
+
+        img{
+                margin: 5px 0;
+            }
+      
+</style>
+<body>
+    <div class="drawer">
+        <div class="drawer-content">
+            <aside id="opcoes" class="column">
+                <div>
+                    <div class="inicial column">
+                        <img src="/public/img/logo.png" width="50px" alt="Logo">
+                        <img src="/public/img/perfil.png" alt="Foto de Perfil" id="fotoPerfil1">
+                    </div>
+                    <div class="opcoes column">
+                        <a href="#"><img src="/public/img/global.png" alt="Global"></a>
+                        <a href="#"><img src="/public/img/chat.png" alt="Chat"></a>
+                        <a href="#"><img src="/public/img/camera.png" alt="Video"></a>
+                        <a href="#"><img src="/public/img/musica.png" alt="Musica"></a>
+                        <a href="#"><img src="/public/img/radio.png" alt="Radio"></a>
+                    </div>
+                </div>
+                <div class="sair column">
+                    <a href="#"><img src="/public/img/config.png" alt="Configurações"></a>
+                    <a href="#"><img src="/public/img/sair.png" alt="Sair"></a>
+                </div>
+            </aside>
+        </div>
+        <button class="drawer-toggle" onclick="toggleDrawer()">Abrir/Fechar</button>
+    </div>
+      
+      <script>
+        function toggleDrawer() {
+            var drawer = document.querySelector('.drawer');
+            drawer.classList.toggle('open');
+          }
+          
+      </script>
+</body>
+</html>

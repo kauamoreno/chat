@@ -29,6 +29,8 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-position: center;
   background-size: cover;
 }
@@ -98,12 +100,14 @@ main img {
   bottom: 0;
   position: absolute;
   width: 91.7%;
+  width: calc(100% - 135px);
 }
 .input_mensagem .rowInput {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 8px 20px;
+  width: 100%;
 }
 .input_mensagem .rowInput #mensagemInput {
   width: 85%;
@@ -140,4 +144,22 @@ main img {
 }
 #mensagemhtml #balaoMensagem #mensagemTexto {
   font-size: 20px;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 1300px) {
+  body {
+    align-items: normal;
+  }
+  main {
+    height: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #opcoes {
+    display: none;
+  }
+  .input_mensagem {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */
