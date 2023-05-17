@@ -1,0 +1,22 @@
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1300px) {
+    body {
+        align-items: normal;
+
+    }
+
+    main{
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #opcoes{
+        display: none;
+    }
+
+    .input_mensagem{
+        width: 90%;
+    }
+}
