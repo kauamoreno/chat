@@ -132,25 +132,36 @@ main img {
 }
 
 /*MENSAGENS NOVA*/
-#mensagemhtml {
+.mensagemhtml {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
   padding: 10px;
 }
-#mensagemhtml #fotoPerfil3 {
+.mensagemhtml #fotoPerfil3 {
   width: 30px;
   height: 30px;
   border-radius: 50px;
 }
-#mensagemhtml #balaoMensagem {
+.mensagemhtml #balaoMensagem {
   margin-left: 30px;
   border-radius: 0px 16px 16px 16px;
   background-color: rgba(79, 224, 11, 0.3);
   padding: 10px;
 }
-#mensagemhtml #balaoMensagem #mensagemTexto {
+.mensagemhtml #balaoMensagem #mensagemTexto {
   font-size: 20px;
+}
+
+#mensagemOutro {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+#mensagemOutro #balaoMensagem {
+  border-radius: 16px 0px 16px 16px;
+  margin-right: 30px;
+  background-color: rgba(11, 68, 224, 0.3);
 }
 
 /*RESPONSIVIDADE*/

@@ -1,6 +1,6 @@
 /*MENSAGENS NOVA*/
 
-#mensagemhtml{
+.mensagemhtml{
     display: flex;
     flex-direction: row;
     margin-left: 30px;
@@ -24,4 +24,16 @@
         }
     }
     
+}
+
+#mensagemOutro{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+    #balaoMensagem{
+        border-radius: 16px 0px 16px 16px;
+        margin-right: 30px;
+        background-color: rgba(11, 68, 224, 0.3);
+    }
 }
