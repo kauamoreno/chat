@@ -30,7 +30,7 @@ socket.on('chat message', dados => {
     const mensagem = document.createElement('div');
 
     const mensagemHTML = `
-    <div id="mensagemhtml">
+    <div class="mensagemhtml">
         <img width="30px" src="${fotoUser}" alt="" id="fotoPerfil3">
         <div id="balaoMensagem">
             <p id="mensagemTexto">${escapeHTML(dados.mensagem)}</p>
