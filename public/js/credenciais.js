@@ -1,4 +1,6 @@
-let nome;
+// Variaveis
+let nomeUser;
+let githubUser;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         preConfirm: (login) => {
             return fetch(`//api.github.com/users/${login}`)
                 .then(response => {
+                    githubUser = login;
                     if (!response.ok) {
                         throw new Error(response.statusText)
                     }
@@ -29,26 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }).then((result) => {
         if (result.isConfirmed) {
 
+
+
             console.log(result);
             localStorage.setItem('fotoUser', result.value.avatar_url);
+
+            const fotoUser = result.value.avatar_url;
+
+            // Define o valor do cookie com o link da fotoUser
+            document.cookie = `fotoUser=${encodeURIComponent(fotoUser)}`;
 
             //Setando as informações no chat
             document.querySelector('#fotoPerfil1').src = result.value.avatar_url
             document.querySelector('#fotoPerfil2').src = result.value.avatar_url
-            
             document.querySelector('body').style.backgroundImage = "url('/public/img/background.jpg')";
             document.querySelector('body').style.backgroundRepeat = "no-repeat";
-            
-            //Verficando se o user tem nome e o colocando
-            if(result.value.name == null){
-                nome = 'Sem nome';
-                document.querySelector('#nome').innerHTML = nome;
-            }else{
-                nome = result.value.name
-                document.querySelector('#nome').innerHTML = nome;
-            }
+            verificaNome(result.value.name); //Verficando se o user tem nome e o colocando 
             document.querySelector('#main').style.display = 'block';
 
+            // Mensagem de confirmação
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -56,6 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 showConfirmButton: false,
                 timer: 1500
             })
+
+
+
         }
     })
 })
+
+function verificaNome(nome){
+    if (nome == null) {
+        nomeUser = 'Sem nome';
+        document.querySelector('#nome').innerHTML = nomeUser;
+    } else {
+        nomeUser = nome;
+        document.querySelector('#nome').innerHTML = nomeUser;
+    }
+}
