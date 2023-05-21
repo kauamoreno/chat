@@ -156,7 +156,6 @@ main img {
 #mensagemOutro {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-start;
 }
 #mensagemOutro #balaoMensagem {
   border-radius: 16px 0px 16px 16px;

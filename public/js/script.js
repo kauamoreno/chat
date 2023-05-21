@@ -3,7 +3,6 @@ const socket = io()
 
 //Seleciona os input
 const mensagemInput = document.getElementById('mensagemInput');
-const nome = document.getElementById('nome');
 
 //Adiciona um evento para o envio do formulário
 document.querySelector('#enviar').addEventListener('click', evento => {
@@ -18,6 +17,7 @@ document.querySelector('#enviar').addEventListener('click', evento => {
 
     //EMIT envia um evento chamado "chat message" com um objeto contendo os valores
     //TRIM() é um método que remove os espaços em branco do inicio ao fim de uma string
+    const nome = document.querySelector('#nome').textContent;
     mensagem.trim() && socket.emit('chat message', { nome, mensagem, fotoUser });
 
     //Limpa o input da mensagem 
@@ -38,11 +38,11 @@ socket.on('chat message', dados => {
     </div>`
 
     console.log('Nome: ' + dados.nome);
-    console.log('foto: ' + dados.fotoUser);
 
     //Acrescentando a mensagem ao html
     const mensagensDisplay = document.getElementById('mensagens');
     mensagensDisplay.appendChild(mensagem);
+    if(dados.nome != document.querySelector('#nome').textContent){ mensagem.id = 'mensagemOutro'; } //Mensagem de outro
     mensagem.innerHTML = mensagemHTML;
 
     // Rolar automaticamente para o final
