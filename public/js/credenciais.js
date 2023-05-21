@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const fotoUser = result.value.avatar_url;
 
-            // Define o valor do cookie com o link da fotoUser
-            document.cookie = `fotoUser=${encodeURIComponent(fotoUser)}`;
+            //Incrementando a foto fornecida na URL
+            const url = new URL(window.location.href);
+            url.searchParams.set('fotoUser', fotoUser);
+            history.pushState(null, null, url);
 
             //Setando as informações no chat
             document.querySelector('#fotoPerfil1').src = result.value.avatar_url
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-function verificaNome(nome){
+function verificaNome(nome) {
     if (nome == null) {
         nomeUser = 'Sem nome';
         document.querySelector('#nome').innerHTML = nomeUser;

@@ -2,9 +2,8 @@
 const socket = io()
 
 //Seleciona os input
-//const nomeInput = document.getElementById('nome');
 const mensagemInput = document.getElementById('mensagemInput');
-const mensagens = document.getElementById('mensagens');
+const nome = document.getElementById('nome');
 
 //Adiciona um evento para o envio do formulário
 document.querySelector('#enviar').addEventListener('click', evento => {
@@ -12,13 +11,16 @@ document.querySelector('#enviar').addEventListener('click', evento => {
     const mensagem = mensagemInput.value;
     evento.preventDefault(); //Previne o envio padrão do formulário para não atualizar a página
 
-    //Método JAVASCRIPT que verifica os valores válido (Não está em branco os campos)
+    // Pegando imagem pela url
+    const params = new URLSearchParams(window.location.search);
+    const fotoUserEncriptada = params.get('fotoUser');
+    const fotoUser = decodeURIComponent(fotoUserEncriptada);
+
     //EMIT envia um evento chamado "chat message" com um objeto contendo os valores
     //TRIM() é um método que remove os espaços em branco do inicio ao fim de uma string
-    const fotoUser = localStorage.getItem('fotoUser');
     mensagem.trim() && socket.emit('chat message', { nome, mensagem, fotoUser });
 
-    //Limpa o input da mensagem e desabilita o input do nome do usuário após a primeira mensagem
+    //Limpa o input da mensagem 
     mensagemInput.value = '';
 });
 
