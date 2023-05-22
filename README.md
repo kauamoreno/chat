@@ -5,6 +5,16 @@
 
 <br>
 
+## Dicas de uso
+* link para o site: [chat2-kauamoreno2005.b4a.run/](https://chat2-kauamoreno2005.b4a.run/) <br>
+
+#### Caso não tenha um perfil no GitHub segue alguns para testar:
+* kauamoreno
+* kevintaiyo
+* das
+
+<br>
+
 ## Introdução
 O Chat com Socket.IO é uma aplicação que utiliza a biblioteca Socket.IO para criar uma comunicação bidirecional entre clientes e servidor, permitindo que os usuários troquem mensagens em tempo real. <br>
 Ao estabelecer uma conexão entre o servidor e os clientes, é possível enviar e receber mensagens instantaneamente, garantindo uma experiência de chat dinâmica e interativa.
