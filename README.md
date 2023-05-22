@@ -1,6 +1,7 @@
 <h1 align="center">Chat</h1>
 
-![login](https://github.com/kauamoreno/chat/assets/119445003/ae73b153-e1f4-4127-be8c-b6e93f6bc5a6)
+
+![1](https://github.com/kauamoreno/chat/assets/119445003/1b87c161-f772-491e-b290-ae4191b53d2f)
 
 <br>
 
