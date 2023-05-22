@@ -6,7 +6,8 @@
 <br>
 
 ## Dicas de uso
-* link para o site: [chat2-kauamoreno2005.b4a.run/](https://chat2-kauamoreno2005.b4a.run/) <br>
+* Link para o site: [chat2-kauamoreno2005.b4a.run/](https://chat2-kauamoreno2005.b4a.run/)
+* O sevidor é dasabilitado quando fica inativo por 30 min, por isso o site pode demorar 1 min para entrar<br>
 
 #### Caso não tenha um perfil no GitHub segue alguns para testar:
 * kauamoreno
