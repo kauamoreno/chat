@@ -11,7 +11,9 @@
 #### Caso não tenha um perfil no GitHub segue alguns para testar:
 * kauamoreno
 * kevintaiyo
+* nikolaseduardo
 * das
+* rwe
 
 <br>
 
