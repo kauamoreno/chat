@@ -27,17 +27,24 @@ document.querySelector('#enviar').addEventListener('click', evento => {
 //Adiciona um evento de mensagem recebido para o servidor
 socket.on('chat message', dados => {
 
+    function verificadorNomeMsg(nome){
+        if(nome == document.querySelector('#nome').textContent){
+            return 'Você';
+        }else {
+            return nome;
+        }
+    }
+
     // Mensagem
     const mensagem = document.createElement('div');
     const mensagemHTML = `
     <div class="mensagemhtml">
         <img width="30px" src="${dados.fotoUser}" alt="" id="fotoPerfil3">
         <div id="balaoMensagem">
+            <p id="nomeMensagem">${verificadorNomeMsg(dados.nome)}</p>
             <p id="mensagemTexto">${escapeHTML(dados.mensagem)}</p>
-        <div>
+        <div> 
     </div>`
-
-    console.log('Nome: ' + dados.nome);
 
     //Acrescentando a mensagem ao html
     const mensagensDisplay = document.getElementById('mensagens');

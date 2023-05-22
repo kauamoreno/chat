@@ -148,6 +148,13 @@ main img {
   border-radius: 0px 16px 16px 16px;
   background-color: rgba(79, 224, 11, 0.3);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.mensagemhtml #balaoMensagem #nomeMensagem {
+  font-size: 15px;
+  color: brown;
+  margin-bottom: 10px;
 }
 .mensagemhtml #balaoMensagem #mensagemTexto {
   font-size: 20px;
@@ -161,6 +168,9 @@ main img {
   border-radius: 16px 0px 16px 16px;
   margin-right: 30px;
   background-color: rgba(11, 68, 224, 0.3);
+}
+#mensagemOutro #balaoMensagem #nomeMensagem {
+  color: cornflowerblue;
 }
 
 /*RESPONSIVIDADE*/
