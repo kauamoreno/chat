@@ -3,6 +3,18 @@
 
 ![1](https://github.com/kauamoreno/chat/assets/119445003/1b87c161-f772-491e-b290-ae4191b53d2f)
 
+![1](https://github.com/kauamoreno/chat/assets/119445003/8de8a63a-0ed5-41e0-a3ab-5f3488ae3bd9)
+
+
+<div style="display: flex;">
+  
+  <img src="https://github.com/kauamoreno/chat/assets/119445003/26b27615-0826-4ffc-96e0-c8016d3cf4e8" alt="Imagem 1" width="49%">
+  <img src="https://github.com/kauamoreno/chat/assets/119445003/f3f2f2bd-a847-4b27-a54b-398902bd9299" alt="Imagem 2" width="49%">
+  
+</div>
+
+ 
+ 
 <br>
 
 ## Dicas de uso
