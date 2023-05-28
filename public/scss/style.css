@@ -131,19 +131,19 @@ main img {
   color: white;
 }
 
-/*MENSAGENS NOVA*/
-.mensagemhtml {
+/*MENSAGENS SUA*/
+.mensagemVoce {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
   padding: 10px;
 }
-.mensagemhtml #fotoPerfil3 {
+.mensagemVoce #fotoPerfil3 {
   width: 30px;
   height: 30px;
   border-radius: 50px;
 }
-.mensagemhtml #balaoMensagem {
+.mensagemVoce #balaoMensagem {
   margin-left: 30px;
   border-radius: 0px 16px 16px 16px;
   background-color: rgba(79, 224, 11, 0.3);
@@ -151,26 +151,42 @@ main img {
   display: flex;
   flex-direction: column;
 }
-.mensagemhtml #balaoMensagem #nomeMensagem {
+.mensagemVoce #balaoMensagem #nomeMensagem {
   font-size: 15px;
   color: brown;
   margin-bottom: 10px;
 }
-.mensagemhtml #balaoMensagem #mensagemTexto {
+.mensagemVoce #balaoMensagem #mensagemTexto {
   font-size: 20px;
 }
 
-#mensagemOutro {
+/*MENSAGENS OUTRO*/
+.mensagemOutro {
   display: flex;
   flex-direction: row-reverse;
+  margin-left: 30px;
+  padding: 10px;
 }
-#mensagemOutro #balaoMensagem {
-  border-radius: 16px 0px 16px 16px;
+.mensagemOutro #fotoPerfil3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+.mensagemOutro #balaoMensagem {
   margin-right: 30px;
+  border-radius: 16px 0px 16px 16px;
   background-color: rgba(11, 68, 224, 0.3);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
-#mensagemOutro #balaoMensagem #nomeMensagem {
+.mensagemOutro #balaoMensagem #nomeMensagem {
+  font-size: 15px;
   color: cornflowerblue;
+  margin-bottom: 10px;
+}
+.mensagemOutro #balaoMensagem #mensagemTexto {
+  font-size: 20px;
 }
 
 /*RESPONSIVIDADE*/

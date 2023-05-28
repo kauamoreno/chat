@@ -1,6 +1,6 @@
-/*MENSAGENS NOVA*/
+/*MENSAGENS SUA*/
 
-.mensagemhtml {
+.mensagemVoce {
     display: flex;
     flex-direction: row;
     margin-left: 30px;
@@ -34,17 +34,36 @@
 
 }
 
-#mensagemOutro {
+/*MENSAGENS OUTRO*/
+.mensagemOutro {
     display: flex;
     flex-direction: row-reverse;
+    margin-left: 30px;
+    padding: 10px;
+
+    #fotoPerfil3 {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+    }
 
     #balaoMensagem {
-        border-radius: 16px 0px 16px 16px;
         margin-right: 30px;
+        border-radius: 16px 0px 16px 16px;
         background-color: rgba(11, 68, 224, 0.3);
+        padding: 10px;
 
-        #nomeMensagem{
+        display: flex;
+        flex-direction: column;
+
+        #nomeMensagem {
+            font-size: 15px;
             color: cornflowerblue;
+            margin-bottom: 10px;
+        }
+
+        #mensagemTexto {
+            font-size: 20px;
         }
     }
 }

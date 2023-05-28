@@ -37,8 +37,17 @@ socket.on('chat message', dados => {
 
     // Mensagem
     const mensagem = document.createElement('div');
-    const mensagemHTML = `
-    <div class="mensagemhtml">
+    const mensagemVoce = `
+    <div class="mensagemVoce">
+        <img width="30px" src="${dados.fotoUser}" alt="" id="fotoPerfil3">
+        <div id="balaoMensagem">
+            <p id="nomeMensagem">${verificadorNomeMsg(dados.nome)}</p>
+            <p id="mensagemTexto">${escapeHTML(dados.mensagem)}</p>
+        <div> 
+    </div>`;
+    
+    const mensagemOutro = `
+    <div class="mensagemOutro">
         <img width="30px" src="${dados.fotoUser}" alt="" id="fotoPerfil3">
         <div id="balaoMensagem">
             <p id="nomeMensagem">${verificadorNomeMsg(dados.nome)}</p>
@@ -49,8 +58,12 @@ socket.on('chat message', dados => {
     //Acrescentando a mensagem ao html
     const mensagensDisplay = document.getElementById('mensagens');
     mensagensDisplay.appendChild(mensagem);
-    if(dados.nome != document.querySelector('#nome').textContent){ mensagem.id = 'mensagemOutro'; } //Mensagem de outro
-    mensagem.innerHTML = mensagemHTML;
+    if(dados.nome == document.querySelector('#nome').textContent){
+        mensagem.innerHTML = mensagemVoce;
+    } else{
+        mensagem.innerHTML = mensagemOutro;
+    }
+    
 
     // Rolar automaticamente para o final
     mensagensDisplay.scrollTop = mensagensDisplay.scrollHeight;
