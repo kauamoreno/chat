@@ -41,7 +41,7 @@
                         <center>
                             <p id="nome">Kauã Moreno</p>
                         </center>
-                        
+
                     </div>
                     <div class="video_info">
                         <a href="#"><img src="/public/img/camera.png" alt="Video"></a>
@@ -56,7 +56,13 @@
 
             <div class="input_mensagem">
                 <div class="rowInput">
-                    <img src="/public/img/clipe.png" alt="Clipe">
+                    
+                    <!-- SELETOR DE ARQUIVOS -->
+                    <input type="file" id="arquivo" name="arquivo" style="display: none;">
+                    <label for="arquivo" style="cursor: pointer;">
+                        <img src="/public/img/clipe.png" alt="Clipe">
+                    </label>
+
                     <input type="text" placeholder="Digite sua mensagem..." id="mensagemInput">
                     <button id="enviar">Enviar</button>
                 </div>
